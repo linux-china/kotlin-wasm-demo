@@ -8,3 +8,4 @@ WebAssembly demo with Kotlin Multiplatform.
 
 * WebAssembly Home: https://webassembly.org/
 * Kotlin Multiplatform Programming: https://kotlinlang.org/docs/reference/multiplatform.html
+* WebAssembly Specifications: https://webassembly.github.io/spec/
