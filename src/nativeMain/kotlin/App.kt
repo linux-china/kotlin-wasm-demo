@@ -11,6 +11,9 @@ fun hello() {
    println("Hello from retain")
 }
 
+@SymbolName("alert")
+external fun alert(message: Any?): Unit
+
 fun JsValue.onclick(lambda: kotlinx.wasm.jsinterop.KtFunction<kotlin.Unit> ) {
     this.setter("onclick",lambda);
 }
