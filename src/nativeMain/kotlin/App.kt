@@ -8,6 +8,9 @@ import org.mvnsearch.wasm.demo.Welcome
 
 fun main() {
     val demo = document.getElementById("Demo")
-    demo.setter("href", "https://www.google.com")
+    demo.setter("href", "#")
+    demo.setter("onclick") {
+        println("mouse clicked!")
+    }
     println(Welcome().hello())
 }
