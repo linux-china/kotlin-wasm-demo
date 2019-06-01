@@ -5,6 +5,10 @@ import kotlinx.interop.wasm.dom.document
 import kotlinx.wasm.jsinterop.setter
 import org.mvnsearch.wasm.demo.Welcome
 
+@Retain
+fun hello() {
+   println("Hello from retain")
+}
 
 fun main() {
     val demo = document.getElementById("Demo")
