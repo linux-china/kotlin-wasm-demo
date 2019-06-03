@@ -23,6 +23,7 @@ Please refer justfile.
 # References
 
 * WebAssembly Home: https://webassembly.org/
+* Web APIs: https://developer.mozilla.org/en-US/docs/Web/API
 * Kotlin Multiplatform Programming: https://kotlinlang.org/docs/reference/multiplatform.html
 * WebAssembly Specifications: https://webassembly.github.io/spec/
 * wabt: The WebAssembly Binary Toolkit https://github.com/WebAssembly/wabt
