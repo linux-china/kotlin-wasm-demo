@@ -37,6 +37,44 @@ external fun knjs__alert(textPtr: Int, textLen: Int): Unit
 
 ```
 
+# Export WebAssembly functions for JS
+
+* Create a Kotlin function with @Retain annotation
+
+```
+@Retain
+fun hello() {
+    println("Hello from Kotlin")
+}
+```
+* Add global exports from WebAssembly in xxx.wasm.js
+
+```javascript
+var konan = { libraries: [], exports:{} };
+```
+
+* Bind the exported functions in invokeModule to konan.exports
+
+```
+
+for(name in instance.exports) {
+           if(name.startsWith("kfun:"))  {
+               fn_name = name.substring(5,name.indexOf("("));
+               konan.exports[fn_name] = instance.exports[name];
+           }
+        }
+
+ var f = instance.exports['kfun:hello()'];
+ f();
+
+```
+
+* Invoke js function
+
+```
+konan.exports.hello();
+```
+
 # Todo
 
 * XMLHttpRequest and  WebClient for WebAssembly
