@@ -71,6 +71,3 @@ fun drawCanvas() {
 fun hello() {
     println("Hello from Kotlin")
 }
-
-@SymbolName("alert")
-external fun alert(message: Any?): Unit
