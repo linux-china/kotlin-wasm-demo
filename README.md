@@ -14,6 +14,29 @@ Please refer justfile.
 * Run build:  ./gradlew clean build
 * In IDEA, right click index.html and open in Chrome
 
+# Call customized JS functions from WebAssembly
+
+* Create js functions and call konan.libraries.push() to push them into libraries in xxx.wasm.js as following:
+```
+ konan.libraries.push ({
+            knjs__alert: function(textPtr, textLen) {
+                  var text = toUTF16String(textPtr, textLen);
+                  window.alert(text)
+              }
+        });
+```
+
+* Then create Kotlin stubs for JS functions.
+```
+fun alert(text: String) {
+    knjs__alert(stringPointer(text), stringLengthBytes(text))
+}
+
+@SymbolName("knjs__alert")
+external fun knjs__alert(textPtr: Int, textLen: Int): Unit
+
+```
+
 # Todo
 
 * XMLHttpRequest and  WebClient for WebAssembly
