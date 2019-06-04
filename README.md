@@ -42,6 +42,9 @@ external fun knjs__alert(textPtr: Int, textLen: Int): Unit
 * Create a Kotlin function with @Retain annotation
 
 ```
+/**
+ * argument types:  int, double https://github.com/WebAssembly/design/blob/master/Semantics.md#types
+ */
 @Retain
 fun hello() {
     println("Hello from Kotlin")
@@ -63,9 +66,6 @@ for(name in instance.exports) {
                konan.exports[fn_name] = instance.exports[name];
            }
         }
-
- var f = instance.exports['kfun:hello()'];
- f();
 
 ```
 
