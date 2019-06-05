@@ -77,7 +77,7 @@ konan.exports.hello();
 
 # Todo
 
-* XMLHttpRequest and  WebClient for WebAssembly
+* Fetch and  WebClient for WebAssembly
 * More DOM API
 * customized JS functions for WebAssembly
 
