@@ -88,3 +88,4 @@ konan.exports.hello();
 * Kotlin Multiplatform Programming: https://kotlinlang.org/docs/reference/multiplatform.html
 * WebAssembly Specifications: https://webassembly.github.io/spec/
 * wabt: The WebAssembly Binary Toolkit https://github.com/WebAssembly/wabt
+* Awesome WebAssembly: https://github.com/mbasso/awesome-wasm
