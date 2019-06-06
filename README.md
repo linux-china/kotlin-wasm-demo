@@ -75,11 +75,33 @@ for(name in instance.exports) {
 konan.exports.hello();
 ```
 
-# Todo
 
-* Fetch and  WebClient for WebAssembly
-* More DOM API
-* customized JS functions for WebAssembly
+### JS communicated with Kotlin WebAssembly(wasm32)
+
+* JS to refer Kotlin JsValue Object:
+
+```
+function kotlinObject(arenaIndex, objectIndex)
+```
+
+* Kotlin refer JS Object:  JsValue(arena,object)
+* Data Type: Int, Double(twoIntsToDouble), String: stringPointer(id), stringLengthBytes(id), JsString
+
+### JsString class
+
+```
+//js
+Konan_js_getStringChar: function (arenaIndex, objIndex, charIndex) {
+        var arena = konan_dependencies.env.arenas.get(arenaIndex);
+        var value = arena[objIndex].charCodeAt(charIndex);
+        return value;
+    }
+
+//kotlin
+
+@SymbolName("Konan_js_getStringChar")
+external fun getStringChar(arena: Arena, obj: Object, index: Int ): Int
+```
 
 # References
 
