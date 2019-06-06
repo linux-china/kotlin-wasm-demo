@@ -13,6 +13,13 @@ fun alert(text: String) {
 external fun knjs__alert(textPtr: Int, textLen: Int): Unit
 
 
+/**
+ * Konan_js_getStringChar: function (arenaIndex, objIndex, charIndex) {
+         var arena = konan_dependencies.env.arenas.get(arenaIndex);
+         var value = arena[objIndex].charCodeAt(charIndex);
+         return value;
+     }
+ */
 @SymbolName("Konan_js_getStringChar")
 external fun getStringChar(arena: Arena, obj: Object, index: Int): Int
 
