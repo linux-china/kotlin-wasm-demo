@@ -44,7 +44,7 @@ val jsinterop by tasks.creating(Exec::class) {
 // generate jsinterop before native compile
 tasks.named("compileKotlinNative") {
     if (!Files.exists(jsinteropKlibFileName)) {
-        dependsOn(jsinterop)
+       // dependsOn(jsinterop)
     }
 }
 
