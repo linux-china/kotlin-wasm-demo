@@ -29,7 +29,7 @@ open class JsString(arena: Arena, index: Object) : JsValue(arena, index) {
     fun getString(): String {
         val length = this.getInt("length")
         var result = ""
-        for (i in 0..length - 1) {
+        for (i in 0 until length) {
             result += getStringChar(arena, index, i).toChar()
         }
         return result;
