@@ -1,4 +1,4 @@
-export KOTLIN_NATIVE_HOME := "~/.konan/kotlin-native-macos-1.3.50"
+export KOTLIN_NATIVE_HOME := "~/.konan/kotlin-native-macos-1.3.60"
 
 build: jsinterop
   ./gradlew build
