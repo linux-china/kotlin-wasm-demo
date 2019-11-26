@@ -2,7 +2,7 @@ import java.nio.file.Paths
 import java.nio.file.Files
 
 plugins {
-    kotlin("multiplatform") version "1.3.50"
+    kotlin("multiplatform") version "1.3.60"
 }
 
 repositories {
